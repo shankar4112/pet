@@ -16,7 +16,7 @@ const AdminRequests = () => {
 
         // Fetch pet details for each request
         const petIds = requestData.map(request => request.petId);
-        const petResponse = await axios.get('http://localhost:5000/getpetlist', {
+        const petResponse = await axios.get('https://full-stack-pet-adoption.onrender.com/getpetlist', {
           params: { ids: petIds.join(',') } // Send petIds as a comma-separated list
         });
 
