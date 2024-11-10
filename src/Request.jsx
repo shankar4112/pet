@@ -13,7 +13,7 @@ const Request = () => {
   useEffect(() => {
     const fetchPet = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/petlist/${id}`);
+        const response = await axios.get(`https://full-stack-pet-adoption.onrender.com/petlist/${id}`);
         setPet(response.data);
       } catch (error) {
         console.error('Error fetching pet details:', error.message);
