@@ -19,23 +19,27 @@ const Admin = () => {
   };
 
   return (
-    <div className="login-form-container admin-login-container">
-      <h1 className="login-form-title">Admin Login</h1>
-      <input
-        type="text"
-        placeholder="Admin Username"
-        className="login-input"
-        value={adminUsername}
-        onChange={(e) => setAdminUsername(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        className="login-input"
-        value={adminPassword}
-        onChange={(e) => setAdminPassword(e.target.value)}
-      />
-      <button onClick={handleAdminLogin} className="login-button">Login as Admin</button>
+    <div className="admin-page-background">
+      <div className="admin-login-wrapper">
+        <h1 className="admin-login-title">Admin Login</h1>
+        <input
+          type="text"
+          placeholder="Admin Username"
+          className="admin-input"
+          value={adminUsername}
+          onChange={(e) => setAdminUsername(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="Admin Password"
+          className="admin-input"
+          value={adminPassword}
+          onChange={(e) => setAdminPassword(e.target.value)}
+        />
+        <button onClick={handleAdminLogin} className="admin-button">
+          Login as Admin
+        </button>
+      </div>
     </div>
   );
 };

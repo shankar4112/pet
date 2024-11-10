@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Logout.css';
 
@@ -29,24 +29,26 @@ const Logout = () => {
   };
 
   return (
-    <div className="logout-container">
-      {/* Confirmation message with Yes/No options */}
-      {showConfirmation && (
-        <div className="confirmation-popup">
-          <h2>Do you want to logout from this website?</h2>
-          <div className="confirmation-buttons">
-            <button onClick={handleYes} className="yes-btn">Yes</button>
-            <button onClick={handleNo} className="no-btn">No</button>
+    <div className="log-background">
+      <div className="logout-container">
+        {/* Confirmation message with Yes/No options */}
+        {showConfirmation && (
+          <div className="confirmation-popup">
+            <h2>Do you want to logout from this website?</h2>
+            <div className="confirmation-buttons">
+              <button onClick={handleYes} className="yes-btn">Yes</button>
+              <button onClick={handleNo} className="no-btn">No</button>
+            </div>
           </div>
-        </div>
-      )}
+        )}
 
-      {/* Success message displayed after logout */}
-      {showSuccessMessage && (
-        <div className="success-message">
-          <p>You have successfully logged out!</p>
-        </div>
-      )}
+        {/* Success message displayed after logout */}
+        {showSuccessMessage && (
+          <div className="success-message">
+            <p>You have successfully logged out!</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

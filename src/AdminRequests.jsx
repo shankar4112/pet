@@ -54,6 +54,17 @@ const AdminRequests = () => {
 
 
   return (
+    <div className="App">
+      {/* Transparent Navbar */}
+      <nav className="navbar">
+        <div className="navbar-logo">FourPaws</div>
+        <ul className="navbar-links">
+        <li><a href="/homee">Home</a></li>
+          <li><a href="/petform">Pet-Form</a></li>
+          <li><a href="admin/requests">Admin-Request</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+      </nav>
     <div className="admin-requests-page">
       <h2>All Requests</h2>
       <div className="requests-list">
@@ -87,6 +98,7 @@ const AdminRequests = () => {
           ))
         )}
       </div>
+    </div>
     </div>
   );
 };
