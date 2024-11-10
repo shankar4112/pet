@@ -77,7 +77,7 @@ const AdminRequests = () => {
                 {/* Display the pet image */}
                 {pets[request.petId] && pets[request.petId].image && (
                   <img 
-                    src={`http://localhost:5000/uploads/${pets[request.petId].image.replace('E:\\project\\pet-platform\\pet\\backend\\pet-platform\\pet\\public\\uploads\\', '')}`} 
+                    src={`https://full-stack-pet-adoption.onrender.com/uploads/${pets[request.petId].image.replace('E:\\project\\pet-platform\\pet\\backend\\pet-platform\\pet\\public\\uploads\\', '')}`} 
                     alt={pets[request.petId].name} 
                     className="pet-image" 
                   />
