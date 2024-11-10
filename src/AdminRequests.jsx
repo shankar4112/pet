@@ -40,7 +40,7 @@ const AdminRequests = () => {
     console.log("user",userEmail);
 
     try {
-      await axios.post('http://localhost:5000/send-mail', {
+      await axios.post('https://full-stack-pet-adoption.onrender.com/send-mail', {
         userEmail,
         petName,
         petId,
