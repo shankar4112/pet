@@ -83,7 +83,7 @@ const PetList = () => {
                 {pet.image && (
                   <img
                     className="pet-item-image"
-                    src={`http://localhost:5000/uploads/${pet.image.replace('E:\\project\\pet-platform\\pet\\backend\\pet-platform\\pet\\public\\uploads\\', '')}`}  // Strip the absolute path and leave the relative part
+                    src={`https://full-stack-pet-adoption.onrender.com/uploads/${pet.image.replace('E:\\project\\pet-platform\\pet\\backend\\pet-platform\\pet\\public\\uploads\\', '')}`}  // Strip the absolute path and leave the relative part
                     alt={pet.name}
                   />
                 )}
