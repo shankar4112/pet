@@ -43,7 +43,7 @@ const PetList = () => {
         <ul className="navbar-links">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/petlist">Pet-List</Link></li>
-          <li><Link to="/recommend">Recommend-Food</Link></li>
+          <li><Link to="/chatai">Recommend</Link></li>
           <li><Link to="/logout">Logout</Link></li>
         </ul>
       </nav>

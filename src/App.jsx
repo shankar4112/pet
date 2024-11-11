@@ -11,9 +11,9 @@ import AdminRequests from './AdminRequests';
 import Request from './Request';
 import Homee from './Homee';
 import Logout from './Logout';
-
+import ChatAI from './ChatAI'; // Import ChatAI component
+import './index.css';
 import './App.css';
-
 
 function App() {
   return (
@@ -27,14 +27,12 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/admin-login" element={<Admin/>} />
+          <Route path="/admin-login" element={<Admin />} />
           <Route path="/request/:id" element={<Request />} />
           <Route path="/admin/requests" element={<AdminRequests />} />
           <Route path="/homee" element={<Homee />} />
           <Route path="/logout" element={<Logout />} />
-          
-
-          {/* Corrected this line */}
+          <Route path="/chatai" element={<ChatAI />} /> {/* Add route for ChatAI */}
         </Routes>
       </div>
     </Router>

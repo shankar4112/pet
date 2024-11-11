@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './form.css';  // Importing the CSS file
 
 const PetForm = () => {
   const [formData, setFormData] = useState({
@@ -49,65 +48,93 @@ const PetForm = () => {
   return (
     <div className="pet-form-page">
       {/* Navbar */}
-      <nav className="navbar">
-        <div className="navbar-brand">FourPaws</div>
-        <ul className="navbar-links">
-          <li><a href="/home">Home</a></li>
-          <li><a href="/petform">PetForm</a></li>
-          <li><a href="/admin/requests">Request-Page</a></li>
-          <li><a href="/logout">Logout</a></li>
-        </ul>
+      <nav className="bg-green-500 p-4">
+        <div className="flex justify-between items-center">
+          <div className="text-white font-semibold text-lg">FourPaws</div>
+          <ul className="flex space-x-6 text-white">
+            <li><a href="/home" className="hover:text-gray-200">Home</a></li>
+            <li><a href="/petform" className="hover:text-gray-200">PetForm</a></li>
+            <li><a href="/admin/requests" className="hover:text-gray-200">Request-Page</a></li>
+            <li><a href="/logout" className="hover:text-gray-200">Logout</a></li>
+          </ul>
+        </div>
       </nav>
 
       {/* Pet Form */}
-      <div className="pet-form-container">
-        <h1>Add a New Pet</h1>
+      <div className="max-w-lg mx-auto p-8 bg-white rounded-xl shadow-md mt-6">
+        <h1 className="text-2xl font-semibold text-center mb-6">Add a New Pet</h1>
         <form onSubmit={handleSubmit}>
-          <div className="pet-form-inputs">
-            <input
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="Name"
-              required
-            />
-            <input
-              name="age"
-              value={formData.age}
-              onChange={handleChange}
-              placeholder="Age"
-              required
-            />
-            <input
-              name="type"
-              value={formData.type}
-              onChange={handleChange}
-              placeholder="Type"
-              required
-            />
-            <input
-              name="breed"
-              value={formData.breed}
-              onChange={handleChange}
-              placeholder="Breed"
-              required
-            />
-            <input
-              name="mediDescription" // New input for medical description
-              value={formData.mediDescription}
-              onChange={handleChange}
-              placeholder="Medical Description"
-              required
-            />
-            <input
-              type="file"
-              onChange={handleFileChange}
-              accept="image/jpeg, image/png"
-              required
-            />
+          <div className="space-y-6">
+            <div className="input-group">
+              <label htmlFor="name" className="block text-lg font-semibold">Pet Name</label>
+              <input
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Enter Pet Name"
+                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                required
+              />
+            </div>
+            <div className="input-group">
+              <label htmlFor="age" className="block text-lg font-semibold">Age</label>
+              <input
+                name="age"
+                value={formData.age}
+                onChange={handleChange}
+                placeholder="Enter Age"
+                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                required
+              />
+            </div>
+            <div className="input-group">
+              <label htmlFor="type" className="block text-lg font-semibold">Type</label>
+              <input
+                name="type"
+                value={formData.type}
+                onChange={handleChange}
+                placeholder="Enter Type (e.g. Dog, Cat)"
+                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                required
+              />
+            </div>
+            <div className="input-group">
+              <label htmlFor="breed" className="block text-lg font-semibold">Breed</label>
+              <input
+                name="breed"
+                value={formData.breed}
+                onChange={handleChange}
+                placeholder="Enter Breed"
+                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                required
+              />
+            </div>
+            <div className="input-group">
+              <label htmlFor="mediDescription" className="block text-lg font-semibold">Medical Description</label>
+              <textarea
+                name="mediDescription"
+                value={formData.mediDescription}
+                onChange={handleChange}
+                placeholder="Enter any medical details"
+                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                required
+              />
+            </div>
+            <div className="input-group">
+              <label htmlFor="image" className="block text-lg font-semibold">Upload Pet Image</label>
+              <input
+                type="file"
+                onChange={handleFileChange}
+                accept="image/jpeg, image/png"
+                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                required
+              />
+            </div>
           </div>
-          <div className="pet-form-submit">
-            <button type="submit">Submit</button>
+          <div className="mt-6 text-center">
+            <button type="submit" className="px-6 py-3 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">
+              Submit
+            </button>
           </div>
         </form>
       </div>

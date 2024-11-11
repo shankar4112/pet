@@ -61,7 +61,7 @@ const AdminRequests = () => {
         <ul className="navbar-links">
         <li><a href="/homee">Home</a></li>
           <li><a href="/petform">Pet-Form</a></li>
-          <li><a href="admin/requests">Admin-Request</a></li>
+          <li><a href="admin/requests">Request page</a></li>
           <li><a href="/logout">Logout</a></li>
         </ul>
       </nav>
